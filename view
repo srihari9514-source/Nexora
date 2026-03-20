@@ -1,0 +1,26 @@
+import "./style.css";
+
+function Home() {
+  const products = [
+    { name: "Nexora Detergent 1L", price: 150 },
+    { name: "Nexora Detergent 2L", price: 280 }
+  ];
+
+  return (
+    <div>
+      <h1>NEXORA</h1>
+
+      <input placeholder="Search..." />
+
+      {products.map((p, i) => (
+        <div className="card" key={i}>
+          <h3>{p.name}</h3>
+          <p>₹{p.price}</p>
+          <button>Add to Cart</button>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default Home;
